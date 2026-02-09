@@ -4,7 +4,7 @@ Vpnparser parses VPN URI to sing-box/xray-core Outbound.
 ## install
 
 ```bash
-go install github.com/komoe-monywa/uri-to-json@latest
+go install github.com/komoe-monywa/vpnparse@latest
 ```
 
 ## commands
