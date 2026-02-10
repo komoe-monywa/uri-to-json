@@ -72,7 +72,7 @@ func ParseRawUri(rawUri string) (result string) {
 		}
 	} else {
 		if passwDecrypted := crypt.DecodeBase64(passw); passwDecrypted != "" {
-			result = strings.ReplaceAll(rawUri, passw, passw)
+			result = strings.ReplaceAll(rawUri, passw, passwDecrypted)
 		}
 	}
 
@@ -82,6 +82,7 @@ func ParseRawUri(rawUri string) (result string) {
 	result = HandleQuery(result)
 	return
 }
+
 
 
 
