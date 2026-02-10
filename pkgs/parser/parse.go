@@ -96,7 +96,7 @@ func ParseRawUri(rawUri string) (result string) {
 
 	host := r.Host
 	uname := r.User.Username()
-	passw, hasPassword := r.User.Password() // passw မလိုတော့ဘူး
+	_, hasPassword := r.User.Password() // passw မလိုတော့ဘူး
 
 	if !strings.Contains(rawUri, "@") {
 		// host base64 decode (rare case)
@@ -119,6 +119,7 @@ func ParseRawUri(rawUri string) (result string) {
 	result = HandleQuery(result)
 	return
 }
+
 
 
 
