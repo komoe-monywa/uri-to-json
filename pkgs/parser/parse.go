@@ -73,7 +73,6 @@ func ParseRawUri(rawUri string) (result string) {
 	} else if hasPassword {
 		result = rawUri
 		}
-	}
 
 	if strings.Contains(result, "%") {
 		result, _ = url.QueryUnescape(result)
@@ -81,3 +80,4 @@ func ParseRawUri(rawUri string) (result string) {
 	result = HandleQuery(result)
 	return
 }
+
