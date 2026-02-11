@@ -5,7 +5,7 @@ go 1.25.7
 require (
 	github.com/gogf/gf/v2 v2.6.1
 	github.com/gvcgo/goutils v1.0.8
-	github.com/urfave/cli/v2 v2.25.7
+	github.com/urfave/cli/v2 v2.27.7
 )
 
 require (
@@ -16,7 +16,7 @@ require (
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/charmbracelet/lipgloss v1.1.0 // indirect
 	github.com/clbanning/mxj/v2 v2.7.0 // indirect
-	github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81 // indirect
+	github.com/containerd/console v1.0.5 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
 	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/gookit/color v1.6.0 // indirect
