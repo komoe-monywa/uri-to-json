@@ -58,30 +58,14 @@ func ParseRawUri(rawUri string) (result string) {
 		return
 	}
 
-	host := r.Host
-	uname := r.User.Username()
-	passw, hasPassword := r.User.Password()
-
-	if !strings.Contains(rawUri, "@") {
-		if hostDecrypted := crypt.DecodeBase64(host); hostDecrypted != "" {
-			result = strings.ReplaceAll(rawUri, host, hostDecrypted)
-		}
-	} else if uname != "" && !hasPassword && !strings.Contains(uname, "-") {
-		if unameDecrypted := crypt.DecodeBase64(uname); unameDecrypted != "" {
-			result = strings.ReplaceAll(rawUri, uname, unameDecrypted)
-		}
-	} else {
-		if passwDecrypted := crypt.DecodeBase64(passw); passwDecrypted != "" {
-			result = strings.ReplaceAll(rawUri, passw, passwDecrypted)
-		}
-	}
-
+	
 	if strings.Contains(result, "%") {
 		result, _ = url.QueryUnescape(result)
 	}
 	result = HandleQuery(result)
 	return
 }
+
 
 
 
